@@ -191,9 +191,9 @@ YUMLABS features a carefully crafted design system with:
 
 ## 📚 Documentation
 
-- **[Developer Documentation](docs/developer-doc.md)** - Comprehensive technical guide
-- **[Finance Implementation](docs/finance-implementation.md)** - Stock market feature details
-- **[API Reference](docs/developer-doc.md#modules-breakdown)** - Module documentation
+- **[Developer Documentation](/yumlabs-developer-doc)** - Comprehensive technical guide
+- **[Finance Implementation](/finance-implementation-yumlabs)** - Stock market feature details
+- **[API Reference](/yumlabs-developer-doc#modules-breakdown)** - Module documentation
 
 ---
 
@@ -229,7 +229,7 @@ cargo fmt
 3. Create updater in `src/update/`
 4. Wire up navigation in `view/mod.rs` and `update/mod.rs`
 
-See [Developer Documentation](docs/developer-doc.md) for detailed guides.
+See [Developer Documentation](/yumlabs-developer-doc) for detailed guides.
 
 ---
 
@@ -254,7 +254,7 @@ Contributions are welcome! Please follow these guidelines:
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ---
 
