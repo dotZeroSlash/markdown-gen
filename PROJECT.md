@@ -1,0 +1,1 @@
+The idea of this project, is a rust application that scans all children directories of the const PARENT_DIRECT_PATH: &str = "d:\Documents"; it will then copy all files that match the const DOCUMENT_IDENTIFIER: &str = "*.md"; and all the information found in the mongodb databases and turn them into a proper markdown document, and then save them in the cwd
