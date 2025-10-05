@@ -1,6 +1,7 @@
 export default {
   title: 'Yumlabs Documentation',
   description: 'Generated documentation from Markdown files and MongoDB data',
+  base: '/markdown-gen/',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
