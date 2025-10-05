@@ -192,7 +192,7 @@ YUMLABS features a carefully crafted design system with:
 ## 📚 Documentation
 
 - **[Developer Documentation](/yumlabs-developer-doc)** - Comprehensive technical guide
-- **[Finance Implementation](/finance-implementation-yumlabs)** - Stock market feature details
+- **[Finance Implementation](/yumlabs-finance-implementation)** - Stock market feature details
 - **[API Reference](/yumlabs-developer-doc#modules-breakdown)** - Module documentation
 
 ---
