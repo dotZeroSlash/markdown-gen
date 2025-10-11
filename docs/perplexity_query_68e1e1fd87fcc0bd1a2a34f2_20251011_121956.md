@@ -30,7 +30,7 @@ An optimal learning rate allows the model to converge faster to a good solution 
 
 Learning rate scheduling and adaptive optimizers (like Adam or RMSProp) can further enhance training by adjusting the learning rate dynamically.
 
-Formally, for methods like stochastic gradient descent, the weight update step is 
+Formally, for methods like stochastic gradient descent, the weight update step is
 𝑤
 =
 𝑤
@@ -42,9 +42,9 @@ Formally, for methods like stochastic gradient descent, the weight update step i
 (
 𝑤
 )
-w=w−α⋅∇L(w), where 
+w=w−α⋅∇L(w), where
 𝛼
-α is the learning rate and 
+α is the learning rate and
 ∇
 𝐿
 (

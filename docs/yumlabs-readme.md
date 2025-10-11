@@ -89,7 +89,7 @@ Quick access to your favorite services:
    ```
 
 2. **Set up environment variables**
-   
+
    Create a `.env` file in the project root:
    ```env
    PERPLEXITY_API_KEY=your_perplexity_key_here

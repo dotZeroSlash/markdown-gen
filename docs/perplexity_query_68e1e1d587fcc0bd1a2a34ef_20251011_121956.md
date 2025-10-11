@@ -22,7 +22,7 @@ How do activation functions contribute to neural network performance?
 
 Role in Non-Linearity and Model Capacity
 
-Activation functions transform the weighted sum of inputs in a neuron into an output signal, allowing the network to model non-linear relationships. This transformation is critical because real-world data often involves intricate, non-linear dependencies. For example, while a linear combination of inputs (e.g., 
+Activation functions transform the weighted sum of inputs in a neuron into an output signal, allowing the network to model non-linear relationships. This transformation is critical because real-world data often involves intricate, non-linear dependencies. For example, while a linear combination of inputs (e.g.,
 𝑦
 =
 𝑊

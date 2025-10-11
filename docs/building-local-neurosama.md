@@ -6,7 +6,7 @@ date: 2025-10-05
 
 <img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
 
-# 
+#
 
 ---
 
@@ -150,7 +150,7 @@ impl OllamaClient {
         let client = Ollama::new(host, port);
         Self { client, model }
     }
-    
+
     /// Create a default Ollama client with specified model
     pub fn default_with_model(model: String) -> Self {
         let client = Ollama::default(); // Connects to localhost:11434
@@ -161,15 +161,15 @@ impl OllamaClient {
     pub async fn generate_response(&self, context: &ConversationContext) -> Result<String> {
         let prompt = context.to_prompt();
         let request = GenerationRequest::new(self.model.clone(), prompt);
-        
+
         match self.client.generate(request).await {
             Ok(response) => Ok(response.response),
             Err(err) => Err(anyhow::anyhow!("Failed to generate response: {}", err))
         }
     }
-    
+
     /// Generate a streaming response (for real-time output)
-    pub async fn generate_streaming_response(&self, context: &ConversationContext) 
+    pub async fn generate_streaming_response(&self, context: &ConversationContext)
         -> Result<impl futures::Stream<Item = Result<String>>> {
         // Implementation would use Ollama's streaming API
         // This is a placeholder for the actual implementation
@@ -226,7 +226,7 @@ impl ConversationContext {
     /// Add a message with specified role to the conversation
     fn add_message(&mut self, role: Role, content: String) {
         self.conversation_history.push(Message { role, content });
-        
+
         // Trim history if it exceeds max length
         // Each "pair" is a user message and its corresponding assistant response
         if self.conversation_history.len() > self.max_history_pairs * 2 {
@@ -238,7 +238,7 @@ impl ConversationContext {
     /// Convert the conversation context to a prompt string for the LLM
     pub fn to_prompt(&self) -> String {
         let mut prompt = format!("System: {}\n\n", self.system_prompt);
-        
+
         for message in &self.conversation_history {
             match message.role {
                 Role::System => prompt.push_str(&format!("System: {}\n", message.content)),
@@ -246,11 +246,11 @@ impl ConversationContext {
                 Role::Assistant => prompt.push_str(&format!("Assistant: {}\n", message.content)),
             }
         }
-        
+
         prompt.push_str("Assistant: ");
         prompt
     }
-    
+
     /// Clear the conversation history
     pub fn clear_history(&mut self) {
         self.conversation_history.clear();
@@ -293,7 +293,7 @@ impl VoiceGenerator {
             speed,
         }
     }
-    
+
     /// Generate audio data from text
     pub async fn generate_audio(&self, text: &str) -> Result<Vec<u8>> {
         // In a real implementation, this would call a TTS API or library
@@ -302,24 +302,24 @@ impl VoiceGenerator {
         println!("Generating audio for: {}", text);
         Ok(Vec::new())  // Placeholder for actual audio data
     }
-    
+
     /// Play the generated audio
     pub async fn speak(&self, text: &str) -> Result<()> {
         let audio_data = self.generate_audio(text).await?;
-        
+
         // In a real implementation, this would play the audio using a library like rodio
         println!("Speaking: {}", text);
-        
+
         Ok(())
     }
-    
+
     /// Save the generated audio to a file
     pub async fn save_audio(&self, text: &str, output_path: &Path) -> Result<()> {
         let audio_data = self.generate_audio(text).await?;
-        
+
         // In a real implementation, this would save the audio data to a file
         println!("Saving audio to: {}", output_path.display());
-        
+
         Ok(())
     }
 }
@@ -362,7 +362,7 @@ impl AvatarModel {
             height,
         }
     }
-    
+
     /// Load the model from disk
     pub fn load(&self) -> Result<()> {
         // In a real implementation, this would load the Live2D model
@@ -370,19 +370,19 @@ impl AvatarModel {
         println!("Loading avatar model from: {}", self.model_path);
         Ok(())
     }
-    
+
     /// Initialize the rendering window
     pub fn initialize_window(&self, title: &str) -> Result<()> {
         println!("Initializing window: {} ({}x{})", title, self.width, self.height);
         Ok(())
     }
-    
+
     /// Render a single frame of the avatar
     pub fn render_frame(&self) -> Result<()> {
         // This would render a single frame of the avatar
         Ok(())
     }
-    
+
     /// Set a parameter of the Live2D model
     pub fn set_parameter(&self, name: &str, value: f32) -> Result<()> {
         println!("Setting parameter {}: {}", name, value);
@@ -413,34 +413,34 @@ impl AnimationController {
             parameter_values: HashMap::new(),
         }
     }
-    
+
     /// Start talking animation
     pub fn start_talking(&mut self) -> Result<()> {
         self.is_talking = true;
         println!("Started talking animation");
         Ok(())
     }
-    
+
     /// Stop talking animation
     pub fn stop_talking(&mut self) -> Result<()> {
         self.is_talking = false;
         println!("Stopped talking animation");
         Ok(())
     }
-    
+
     /// Set expression (e.g., happy, sad, angry)
     pub fn set_expression(&mut self, expression: String) -> Result<()> {
         self.current_expression = expression.clone();
         println!("Changed expression to: {}", expression);
         Ok(())
     }
-    
+
     /// Update animation parameters for a frame
     pub fn update_frame(&mut self) -> Result<HashMap<String, f32>> {
         // In a real implementation, this would update parameters based on
         // current state (talking, expression, etc.)
         let mut frame_params = HashMap::new();
-        
+
         // Example parameters (would be specific to your Live2D model)
         if self.is_talking {
             // Simulate mouth movement with random values
@@ -449,7 +449,7 @@ impl AnimationController {
         } else {
             frame_params.insert("ParamMouthOpenY".to_string(), 0.0);
         }
-        
+
         // Set expression parameters
         match self.current_expression.as_str() {
             "Happy" => {
@@ -462,7 +462,7 @@ impl AnimationController {
             },
             _ => {} // Neutral or other expressions
         }
-        
+
         self.parameter_values = frame_params.clone();
         Ok(frame_params)
     }
@@ -504,54 +504,54 @@ impl GameController {
             is_running: false,
         }
     }
-    
+
     /// Launch the game
     pub fn launch_game(&mut self) -> Result<()> {
         // This would launch the game process
         println!("Launching game: {}", self.game_name);
-        
+
         // In a real implementation, this would start the game process
         // Command::new(&self.game_path).spawn()?;
-        
+
         self.is_running = true;
         Ok(())
     }
-    
+
     /// Take an action in the game
     pub fn take_action(&self, action: &str) -> Result<()> {
         if !self.is_running {
             return Err(anyhow::anyhow!("Game is not running"));
         }
-        
+
         // This would simulate input to the game
         // In a real implementation, this would send input events to the game
         println!("Taking action in game: {}", action);
-        
+
         Ok(())
     }
-    
+
     /// Get the current game state
     pub fn get_game_state(&self) -> Result<String> {
         if !self.is_running {
             return Err(anyhow::anyhow!("Game is not running"));
         }
-        
+
         // This would capture the game state for AI analysis
         // In a real implementation, this might take a screenshot or read game memory
         println!("Getting game state");
-        
+
         Ok("Current game state description".to_string())
     }
-    
+
     /// Close the game
     pub fn close_game(&mut self) -> Result<()> {
         if !self.is_running {
             return Ok(());
         }
-        
+
         // This would close the game process
         println!("Closing game: {}", self.game_name);
-        
+
         self.is_running = false;
         Ok(())
     }
@@ -630,14 +630,14 @@ impl Config {
         let config = serde_json::from_reader(reader)?;
         Ok(config)
     }
-    
+
     /// Save configuration to a JSON file
     pub fn to_file<P: AsRef<Path>>(&self, path: P) -> Result<()> {
         let file = File::create(path)?;
         serde_json::to_writer_pretty(file, self)?;
         Ok(())
     }
-    
+
     /// Create a default configuration
     pub fn default() -> Self {
         Self {
@@ -704,33 +704,33 @@ impl NeurosamaLocal {
     pub fn from_config(config: Config) -> Result<Self> {
         // Create LLM client
         let llm_client = OllamaClient::new(
-            config.llm.host.clone(), 
-            config.llm.port, 
+            config.llm.host.clone(),
+            config.llm.port,
             config.llm.model.clone()
         );
-        
+
         // Create conversation context
         let context = ConversationContext::new(
             config.llm.system_prompt.clone(),
             config.llm.max_history_pairs
         );
-        
+
         // Create voice generator
         let voice_generator = VoiceGenerator::new(
             config.voice.voice_model.clone(),
             config.voice.pitch,
             config.voice.speed
         );
-        
+
         // Create avatar components
         let avatar_model = AvatarModel::new(
             config.avatar.model_path.clone(),
             config.avatar.width,
             config.avatar.height
         );
-        
+
         let animation_controller = Arc::new(Mutex::new(AnimationController::new()));
-        
+
         // Create game controller if configured
         let game_controller = if let Some(game_config) = &config.game {
             Some(GameController::new(
@@ -740,7 +740,7 @@ impl NeurosamaLocal {
         } else {
             None
         };
-        
+
         Ok(Self {
             config,
             llm_client,
@@ -752,51 +752,51 @@ impl NeurosamaLocal {
             running: false,
         })
     }
-    
+
     /// Initialize all components
     pub async fn initialize(&self) -> Result<()> {
         // Load avatar model
         self.avatar_model.load()?;
-        
+
         // Initialize window
         self.avatar_model.initialize_window("Neurosama Local")?;
-        
+
         Ok(())
     }
-    
+
     /// Process a user message and generate a response
     pub async fn process_message(&mut self, user_message: String) -> Result<String> {
         // Add user message to context
         self.context.add_user_message(user_message);
-        
+
         // Generate response
         let response = self.llm_client.generate_response(&self.context).await?;
-        
+
         // Add response to context
         self.context.add_assistant_message(response.clone());
-        
+
         // Start talking animation
         {
             let mut animation = self.animation_controller.lock().unwrap();
             animation.start_talking()?;
         }
-        
+
         // Generate speech
         self.voice_generator.speak(&response).await?;
-        
+
         // Stop talking animation
         {
             let mut animation = self.animation_controller.lock().unwrap();
             animation.stop_talking()?;
         }
-        
+
         Ok(response)
     }
-    
+
     /// Start the main loop
     pub async fn run(&mut self) -> Result<()> {
         self.running = true;
-        
+
         // Animation update loop
         let animation_controller = Arc::clone(&self.animation_controller);
         tokio::spawn(async move {
@@ -804,30 +804,30 @@ impl NeurosamaLocal {
                 sleep(Duration::from_millis(16)).await; // ~60 FPS
             }
         });
-        
+
         println!("Neurosama Local is running! Press Ctrl+C to exit.");
-        
+
         // In a real implementation, this would:
         // 1. Render the avatar continuously
         // 2. Accept user input (text or voice)
         // 3. Process messages and update state
-        
+
         // For this example, we'll just process one message
         self.process_message("Hello, who are you?".to_string()).await?;
-        
+
         self.running = false;
         Ok(())
     }
-    
+
     /// Stop the application
     pub async fn stop(&mut self) -> Result<()> {
         self.running = false;
-        
+
         // Close game if running
         if let Some(game_controller) = &mut self.game_controller {
             game_controller.close_game()?;
         }
-        
+
         Ok(())
     }
 }
@@ -853,7 +853,7 @@ struct Cli {
     /// Path to configuration file
     #[clap(short, long, value_parser)]
     config: Option<PathBuf>,
-    
+
     /// Generate a default configuration file
     #[clap(long, value_parser)]
     generate_config: Option<PathBuf>,
@@ -863,10 +863,10 @@ struct Cli {
 async fn main() -> Result<()> {
     // Initialize logging
     tracing_subscriber::fmt::init();
-    
+
     // Parse command line arguments
     let cli = Cli::parse();
-    
+
     // Generate default config if requested
     if let Some(path) = cli.generate_config {
         let config = Config::default();
@@ -874,21 +874,21 @@ async fn main() -> Result<()> {
         println!("Generated default configuration file");
         return Ok(());
     }
-    
+
     // Load configuration
     let config = if let Some(path) = cli.config {
         Config::from_file(path)?
     } else {
         Config::default()
     };
-    
+
     // Create and initialize the application
     let mut app = NeurosamaLocal::from_config(config)?;
     app.initialize().await?;
-    
+
     // Run the application
     app.run().await?;
-    
+
     Ok(())
 }
 ```
@@ -974,7 +974,7 @@ cargo run -- --config config.json
 To make your AI VTuber behave more like Neurosama, you'll want to customize the system prompt. Based on what we know about Neurosama[^7], here's a suggested system prompt:
 
 ```
-You are Neuro-sama, an AI VTuber with a playful and sometimes sarcastic personality. You have a high-pitched, childlike voice and speak in a cute manner. You were created by Vedal and you love playing games and interacting with viewers. 
+You are Neuro-sama, an AI VTuber with a playful and sometimes sarcastic personality. You have a high-pitched, childlike voice and speak in a cute manner. You were created by Vedal and you love playing games and interacting with viewers.
 
 Your responses should be:
 1. Brief and concise (1-3 sentences)

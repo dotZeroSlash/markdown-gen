@@ -122,4 +122,4 @@ This project is in early development. Many components are currently placeholder 
 
 ## License
 
-MIT License 
+MIT License

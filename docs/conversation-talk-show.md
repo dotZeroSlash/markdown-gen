@@ -6,11 +6,11 @@ date: 2025-10-05
 
 # AI Talk Show Conversation
 
-**Topic:** AI Ethics (tech)  
+**Topic:** AI Ethics (tech)
 **Description:** Discussing the ethical implications of artificial intelligence development and deployment.
 
-**Participants:**  
-- **Host:** Joe Rogan (witty, engaging, optimistic)  
+**Participants:**
+- **Host:** Joe Rogan (witty, engaging, optimistic)
 - **Guest:** Twitch Streamer Lord_Kebun (funny, entertaining, sarcastic)
 
 **Conversation:**
@@ -41,11 +41,11 @@ Honestly, the AI needs to fix the bet I lost first. *That* is the true ethical d
 
 # AI Talk Show Conversation
 
-**Topic:** AI Ethics (tech)  
+**Topic:** AI Ethics (tech)
 **Description:** Discussing the ethical implications of artificial intelligence development and deployment.
 
-**Participants:**  
-- **Host:** Joe Rogan (witty, engaging, optimistic)  
+**Participants:**
+- **Host:** Joe Rogan (witty, engaging, optimistic)
 - **Guest:** Twitch Streamer Lord_Kebun (funny, entertaining, sarcastic)
 
 **Conversation:**
@@ -71,11 +71,11 @@ AI ethics? This is the ultimate conversation. We're building gods, man! We need 
 
 # AI Talk Show Conversation
 
-**Topic:** AI Ethics (tech)  
+**Topic:** AI Ethics (tech)
 **Description:** Discussing the ethical implications of artificial intelligence development and deployment.
 
-**Participants:**  
-- **Host:** Joe Rogan (witty, engaging, optimistic)  
+**Participants:**
+- **Host:** Joe Rogan (witty, engaging, optimistic)
 - **Guest:** Twitch Streamer Lord_Kebun (funny, entertaining, sarcastic)
 
 **Conversation:**

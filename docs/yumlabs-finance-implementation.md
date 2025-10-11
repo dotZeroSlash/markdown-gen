@@ -133,7 +133,7 @@ Display cached data    Fetch from Perplexity
 - **Endpoint**: `https://api.perplexity.ai/chat/completions`
 - **Model**: `sonar-reasoning`
 - **Purpose**: Get stock symbol recommendations based on market analysis
-- **Response Format**: 
+- **Response Format**:
   ```
   symbols: [AAPL, MSFT, GOOGL]
   output: Analysis text explaining the recommendations...

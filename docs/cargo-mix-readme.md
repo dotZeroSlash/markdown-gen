@@ -5,7 +5,7 @@ date: 2025-10-05
 ---
 
 <div align="center">
-  
+
 # 🚀 Cargo Mix
 
 [![Crates.io](https://img.shields.io/crates/v/cargo-mix)](https://crates.io/crates/cargo-mix)
@@ -16,10 +16,10 @@ date: 2025-10-05
 
 *Pack your entire repository into a single, AI-friendly file*
 
-[Installation](#-installation) • 
-[Usage](#-usage) • 
-[Configuration](#-configuration) • 
-[Features](#-features) • 
+[Installation](#-installation) •
+[Usage](#-usage) •
+[Configuration](#-configuration) •
+[Features](#-features) •
 [License](#-license)
 
 </div>
@@ -194,4 +194,4 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
     <a href="https://github.com/dotZeroSlash/cargo-mix/issues">Report Bug</a> •
     <a href="https://github.com/dotZeroSlash/cargo-mix/issues">Request Feature</a>
   </p>
-</div> 
+</div>

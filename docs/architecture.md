@@ -71,4 +71,4 @@ When adding new code:
 3. Continue the sequential numbering within that phase
 4. For nested steps, add another level (e.g., 2.3.7)
 
-This documentation should be updated if major architectural changes are made to the application. 
+This documentation should be updated if major architectural changes are made to the application.
