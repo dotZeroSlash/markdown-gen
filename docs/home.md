@@ -35,23 +35,6 @@ Welcome to the Yumlabs Documentation Hub! This site contains comprehensive docum
 - **[Yumlabs Finance Implementation](/yumlabs-finance-implementation)** - Finance implementation details
 - **[Yumlabs README](/yumlabs-readme)** - Yumlabs project overview
 
-### Generated Data Records
-
-#### 📊 Finance Data Records
-Financial data records containing stock quotes, analysis, and market information:
-- **[Finance Data Record (Oct 11)](/finance_data_68e98dd5200413ad9c0dd1cb_20251011_121956.md)** - Stock analysis and recommendations
-- **[Finance Data Record (Oct 11)](/finance_data_68e2cb2031308dd4d7cef05c_20251011_121956.md)** - Market data and insights
-- **[Finance Data Record (Oct 11)](/finance_data_68e57c908f14cd7f4a6b816e_20251011_121956.md)** - Financial metrics and analysis
-- **[Finance Data Record (Oct 11)](/finance_data_68e169c4b2cdbbf7865a8f8c_20251011_121956.md)** - Investment data records
-
-#### 🤖 LLM Response Records
-AI model responses and interactions:
-- **[LLM Response Record (Oct 11)](/llm_response_68dd1f52292b8087b556615a_20251011_121956.md)** - AI model responses
-- **[LLM Response Record (Oct 11)](/llm_response_68dd25bbe811cbe7f1cc5a7a_20251011_121956.md)** - Model interaction logs
-- **[LLM Response Record (Oct 11)](/llm_response_68dd4b06ba9ce41648dba130_20251011_121956.md)** - AI conversation records
-- **[LLM Response Record (Oct 11)](/llm_response_68dd4b11ba9ce41648dba132_20251011_121956.md)** - Language model outputs
-- **[LLM Response Record (Oct 11)](/llm_response_68dd4bfe90a177dc0ad4c190_20251011_121956.md)** - AI response documentation
-
 ## 🚀 Getting Started
 
 1. **Browse Core Documentation** - Start with the main project documentation in the "Core Documentation" section above
