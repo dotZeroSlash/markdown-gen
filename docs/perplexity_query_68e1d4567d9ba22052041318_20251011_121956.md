@@ -1,3 +1,9 @@
+---
+title: Perplexity Query Record
+description: Perplexity query record with question and answer
+date: 2025-10-11
+---
+
 # Perplexity Query Record
 
 Generated on: 2025-10-11 12:19:56
