@@ -1,7 +1,7 @@
 export default {
   title: 'Yumlabs Documentation',
   description: 'Generated documentation from Markdown files and MongoDB data',
-  base: '/',
+  base: '/markdown-gen/',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
@@ -119,19 +119,7 @@ export default {
               // Note: There are many more llm_response files that can be added similarly
             ]
           },
-          {
-            text: 'Perplexity Query Records',
-            collapsible: true,
-            collapsed: true,
-            items: [
-              { text: 'Perplexity Query (Oct 11)', link: '/perplexity_query_68e1d4567d9ba22052041314_20251011_121956' },
-              { text: 'Perplexity Query (Oct 11)', link: '/perplexity_query_68e1d4567d9ba22052041311_20251011_121956' },
-              { text: 'Perplexity Query (Oct 11)', link: '/perplexity_query_68e1d4567d9ba22052041312_20251011_121956' },
-              { text: 'Perplexity Query (Oct 11)', link: '/perplexity_query_68e1d4567d9ba22052041313_20251011_121956' },
-              { text: 'Perplexity Query (Oct 11)', link: '/perplexity_query_68e1d4567d9ba22052041315_20251011_121956' },
-              // Note: There are many more perplexity_query files that can be added similarly
-            ]
-          }
+          
         ]
       }
     ],
