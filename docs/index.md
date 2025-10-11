@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: View Documentation
-      link: /mongodb_docs
+      link: /home
     - theme: alt
       text: View on GitHub
       link: https://github.com/dotZeroSlash
