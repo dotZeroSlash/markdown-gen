@@ -52,18 +52,6 @@ AI model responses and interactions:
 - **[LLM Response Record (Oct 11)](/llm_response_68dd4b11ba9ce41648dba132_20251011_121956)** - Language model outputs
 - **[LLM Response Record (Oct 11)](/llm_response_68dd4bfe90a177dc0ad4c190_20251011_121956)** - AI response documentation
 
-*Note: Additional LLM response records are available in the full navigation menu.*
-
-#### 🔍 Perplexity Query Records
-Perplexity AI queries and responses:
-- **[Perplexity Query Record (Oct 11)](/perplexity_query_68e1d4567d9ba22052041314_20251011_121956)** - AI research queries
-- **[Perplexity Query Record (Oct 11)](/perplexity_query_68e1d4567d9ba22052041311_20251011_121956)** - Information retrieval logs
-- **[Perplexity Query Record (Oct 11)](/perplexity_query_68e1d4567d9ba22052041312_20251011_121956)** - Knowledge base queries
-- **[Perplexity Query Record (Oct 11)](/perplexity_query_68e1d4567d9ba22052041313_20251011_121956)** - Research documentation
-- **[Perplexity Query Record (Oct 11)](/perplexity_query_68e1d4567d9ba22052041315_20251011_121956)** - Query response records
-
-*Note: Additional Perplexity query records are available in the full navigation menu.*
-
 ## 🚀 Getting Started
 
 1. **Browse Core Documentation** - Start with the main project documentation in the "Core Documentation" section above
