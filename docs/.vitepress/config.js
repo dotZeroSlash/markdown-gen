@@ -76,7 +76,8 @@ export default {
               { text: 'OpenCode Rules', link: '/opencode-rules' },
               { text: 'Perplexity Batch Query Tool', link: '/perplexity-batch-query-tool' },
               { text: 'Pull Request Template', link: '/pull-request-template' },
-              { text: 'Finance Data Template', link: '/finance_data_template' }
+               { text: 'Finance Data Template', link: '/finance_data_template' },
+               { text: 'LLM Response Template', link: '/llm_response_template' }
             ]
           },
           {
